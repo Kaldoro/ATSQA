@@ -10,18 +10,18 @@ Effectiveness: 90%
 Maintainability: 90%
 
 
-##PITest (The mutation testing tool)
+## PITest (The mutation testing tool)
 You will need to install this tool, run it and move the output file to the ATSQA folder, 
 and replace the current index.html with the new file which has been generated.
-###Links
+### Links
 https://github.com/hcoles/pitest
 https://pitest.org/java_mutation_testing_systems/
 
-##JNose (Test smell detection tool)
+## JNose (Test smell detection tool)
 Install the tool, and run it.
 The next step is to go the local adress were you can analyze your project by providing a github link.
 Analyze the project "By TestClass", open the results export them to csv file, and rename the file to:
 "testsmells_result.csv"
 The name should already be close to that you just need to remove the name of your project from the file name.
-###Links
+### Links
 https://github.com/arieslab/jnose

@@ -13,7 +13,7 @@ public class main {
         TSHarm.calcModifiers();
 
         String[] mutationResult = FileFuncs.readFile("index.html");
-        String[] testSmellResult = FileFuncs.readFile("Password-Gen_TS_General.csv");
+        String[] testSmellResult = FileFuncs.readFile("testsmells_result.csv");
 
         if(mutationResult.length > 0) {
             //Extract the lineCoverage percentage and the percentage of mutants killed

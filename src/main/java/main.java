@@ -1,6 +1,7 @@
 import Enums.TestSmell;
 import Enums.HarmType;
 import File.FileFuncs;
+import TestSmells.TSHarm;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,8 +10,8 @@ import java.util.List;
 
 public class main {
     public static void main(String[] args) {
-        /**IMPORTANT**///Calculates the correct modifiers for the test smells
-        TSHarm.calcModifiers();
+        //IMPORTANT calculates the correct modifiers for the test smells
+        TSHarm.Init();
 
         String[] mutationResult = FileFuncs.readFile("index.html");
         String[] testSmellResult = FileFuncs.readFile("testsmells_result.csv");
@@ -79,6 +80,6 @@ public class main {
         for(TestSmell testSmell : TestSmell.values()) {
             score -= TSHarm.getSmellHarm(harmType,testSmell,smells);
         }
-        return (int) score;
+        return Math.max((int) score,0);
     }
 }

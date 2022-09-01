@@ -21,4 +21,3 @@ public enum TestSmell {
         return nameStr;
     }
 }
-

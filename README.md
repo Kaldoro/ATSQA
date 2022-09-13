@@ -24,7 +24,7 @@ https://pitest.org/java_mutation_testing_systems/
 Install the tool, and run it.
 The next step is to go the local adress were you can analyze your project by providing a github link.
 Analyze the project "By TestClass", open the results export them to csv file, and rename the file to:
-"testsmells_result.csv"
+"result_byclasstest_testsmells.csv"
 The name should already be close to that you just need to remove the name of your project from the file name.
 
 ### Links

@@ -14,12 +14,12 @@ public class main {
         TSHarm.Init();
 
         String[] mutationResult = FileFuncs.readFile("index.html");
-        String[] testSmellResult = FileFuncs.readFile("testsmells_result.csv");
+        String[] testSmellResult = FileFuncs.readFile("result_byclasstest_testsmells.csv");
 
         if(mutationResult.length > 0) {
             //Extract the lineCoverage percentage and the percentage of mutants killed
-            String lineCoverageStr = mutationResult[21].replaceAll("\\s+","").substring(4).split("%")[0];
-            String mutationScoreStr = mutationResult[22].replaceAll("\\s+","").substring(4).split("%")[0];
+            String lineCoverageStr = mutationResult[23].replaceAll("\\s+","").substring(4).split("%")[0];
+            String mutationScoreStr = mutationResult[24].replaceAll("\\s+","").substring(4).split("%")[0];
 
             //Dissect the results of test smell detection tool into a more manageable result
             HashMap<String,Integer> smells = getSmells(testSmellResult);

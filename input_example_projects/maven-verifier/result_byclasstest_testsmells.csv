@@ -1,0 +1,4 @@
+App;TestFileName;ProductionFileName;LOC;numberMethods;Assertion Roulette;Eager Test;Mystery Guest;Sleepy Test;Unknown Test;Redundant Assertion;Dependent Test;Magic Number Test;Conditional Test Logic;EmptyTest;General Fixture;IgnoredTest;Sensitive Equality;Verbose Test;Default Test;Resource Optimism;Duplicate Assert;Exception Catching Throwing;Constructor Initialization;Print Statement;Lazy Test
+maven-verifier;Embedded3xLauncherTest;C:\Users\Danny\.jnose_projects\maven-verifier\src\main\java\org\apache\maven\shared\verifier\Embedded3xLauncher.java;66;5;0;0;0;0;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+maven-verifier;ForkedLauncherTest;C:\Users\Danny\.jnose_projects\maven-verifier\src\main\java\org\apache\maven\shared\verifier\ForkedLauncher.java;99;6;0;2;0;0;0;0;0;2;0;0;0;0;0;0;0;0;0;0;0;0;2
+maven-verifier;VerifierTest;C:\Users\Danny\.jnose_projects\maven-verifier\src\main\java\org\apache\maven\shared\verifier\Verifier.java;226;15;7;4;0;0;3;0;0;1;0;0;0;2;0;0;0;0;0;1;0;0;6

@@ -1,13 +1,16 @@
-package TestSmells;
+package testSmells;
 
-import Enums.TestSmell;
+import enums.TestSmell;
 import util.Pair;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.List;
-import java.util.HashMap;
 
 public class TSStudies {
+    TSStudies() {
+
+    }
     //Values which combined and averaged out make up the Stability modifier
     static List<Double> assertionRouletteStabModifiers = new ArrayList<>();
     static List<Double> sensitiveEqualityStabModifiers = new ArrayList<>();
@@ -24,13 +27,13 @@ public class TSStudies {
     static List<Double> resourceOptimismEffModifiers = new ArrayList<>();
     static List<Double> mysteryGuestEffModifiers = new ArrayList<>();
 
-    static HashMap<TestSmell,Double> effectivenessModifiers = new HashMap<>();
-    static HashMap<TestSmell,Double> stabilityModifiers = new HashMap<>();
+    static EnumMap<TestSmell,Double> effectivenessModifiers = new EnumMap<>(TestSmell.class);
+    static EnumMap<TestSmell,Double> stabilityModifiers = new EnumMap<>(TestSmell.class);
 
     //Title: To What Extent Can Code Quality be Improved by Eliminating Test Smells?
     //Authors: Haitao Wu,Ruidi Yin,Jianhua Gao,Zijie Huang,Huajun Huang
     //Year: 2022
-    static void Wu2022() {
+    static void wu2022() {
         //Stability modifiers
         assertionRouletteStabModifiers.add(0.6436);
         sensitiveEqualityStabModifiers.add(0.8293);
@@ -49,7 +52,7 @@ public class TSStudies {
     //Title: Are test smells really harmful? An empirical study
     //Authors: Gabriele Bavota, Abdallah Qusef, Rocco Oliveto, Andrea De Lucia, Dave Binkley
     //Year: 2015
-    static void Bavota2015() {
+    static void bavota2015() {
         //Stability modifiers
         assertionRouletteStabModifiers.add(0.55);
         sensitiveEqualityStabModifiers.add(0.24);
@@ -60,37 +63,37 @@ public class TSStudies {
         lazyTestStabModifiers.add(0.20);
     }
 
-    public static Pair<HashMap<TestSmell, Double>, HashMap<TestSmell, Double>> calcModifiers() {
+    public static Pair<EnumMap<TestSmell, Double>, EnumMap<TestSmell, Double>> calcModifiers() {
         //Add results from studies
-        Bavota2015();
-        Wu2022();
+        bavota2015();
+        wu2022();
 
         calcEffectivenessModifiers();
         calcStabilityModifiers();
 
-        return new Pair<HashMap<TestSmell, Double>, HashMap<TestSmell, Double>>(effectivenessModifiers,stabilityModifiers);
+        return new Pair<EnumMap<TestSmell, Double>, EnumMap<TestSmell, Double>>(effectivenessModifiers,stabilityModifiers);
     }
 
     static void calcEffectivenessModifiers() {
         //Calculate effectiveness modifiers
-        effectivenessModifiers.put(TestSmell.Assertion_Roulette,calcAverage(assertionRouletteEffModifiers));
-        effectivenessModifiers.put(TestSmell.Sensitive_Equality,calcAverage(sensitiveEqualityEffModifiers));
-        effectivenessModifiers.put(TestSmell.Eager_Test,calcAverage(eagerTestEffModifiers));
-        effectivenessModifiers.put(TestSmell.Resource_Optimism,calcAverage(resourceOptimismEffModifiers));
-        effectivenessModifiers.put(TestSmell.Mystery_Guest,calcAverage(mysteryGuestEffModifiers));
-        effectivenessModifiers.put(TestSmell.General_Fixture,0.0);
-        effectivenessModifiers.put(TestSmell.Lazy_Test,0.0);
+        effectivenessModifiers.put(TestSmell.ASSERTION_ROULETTE,calcAverage(assertionRouletteEffModifiers));
+        effectivenessModifiers.put(TestSmell.SENSITIVE_EQUALITY,calcAverage(sensitiveEqualityEffModifiers));
+        effectivenessModifiers.put(TestSmell.EAGER_TEST,calcAverage(eagerTestEffModifiers));
+        effectivenessModifiers.put(TestSmell.RESOURCE_OPTIMISM,calcAverage(resourceOptimismEffModifiers));
+        effectivenessModifiers.put(TestSmell.MYSTERY_GUEST,calcAverage(mysteryGuestEffModifiers));
+        effectivenessModifiers.put(TestSmell.GENERAL_FIXTURE,0.0);
+        effectivenessModifiers.put(TestSmell.LAZY_TEST,0.0);
     }
 
     static void calcStabilityModifiers() {
         //Calculate stability modifiers
-        stabilityModifiers.put(TestSmell.Assertion_Roulette,calcAverage(assertionRouletteStabModifiers));
-        stabilityModifiers.put(TestSmell.Sensitive_Equality,calcAverage(sensitiveEqualityStabModifiers));
-        stabilityModifiers.put(TestSmell.Eager_Test,calcAverage(eagerTestStabModifiers));
-        stabilityModifiers.put(TestSmell.Resource_Optimism,calcAverage(resourceOptimismStabModifiers));
-        stabilityModifiers.put(TestSmell.Mystery_Guest,calcAverage(mysteryGuestStabModifiers));
-        stabilityModifiers.put(TestSmell.General_Fixture,calcAverage(generalFixtureStabModifiers));
-        stabilityModifiers.put(TestSmell.Lazy_Test,calcAverage(lazyTestStabModifiers));
+        stabilityModifiers.put(TestSmell.ASSERTION_ROULETTE,calcAverage(assertionRouletteStabModifiers));
+        stabilityModifiers.put(TestSmell.SENSITIVE_EQUALITY,calcAverage(sensitiveEqualityStabModifiers));
+        stabilityModifiers.put(TestSmell.EAGER_TEST,calcAverage(eagerTestStabModifiers));
+        stabilityModifiers.put(TestSmell.RESOURCE_OPTIMISM,calcAverage(resourceOptimismStabModifiers));
+        stabilityModifiers.put(TestSmell.MYSTERY_GUEST,calcAverage(mysteryGuestStabModifiers));
+        stabilityModifiers.put(TestSmell.GENERAL_FIXTURE,calcAverage(generalFixtureStabModifiers));
+        stabilityModifiers.put(TestSmell.LAZY_TEST,calcAverage(lazyTestStabModifiers));
 
     }
 

@@ -17,73 +17,73 @@ class TestMain {
         HashMap<String,Integer> expectedOutput = new HashMap<String,Integer>();
 
         expectedOutput.put("LOC", 90);
-        assertEquals(result.get("LOC"),90);
+        assertEquals(90,result.get("LOC"));
 
         expectedOutput.put("numberMethods", 30);
-        assertEquals(result.get("numberMethods"),30);
+        assertEquals(30,result.get("numberMethods"));
 
         expectedOutput.put("Assertion Roulette",13);
-        assertEquals(result.get("Assertion Roulette"),13);
+        assertEquals(13,result.get("Assertion Roulette"));
 
         expectedOutput.put("Eager Test", 1);
-        assertEquals(result.get("Eager Test"),1);
+        assertEquals(1,result.get("Eager Test"));
 
         expectedOutput.put("Mystery Guest", 1);
-        assertEquals(result.get("Mystery Guest"),1);
+        assertEquals(1,result.get("Mystery Guest"));
 
         expectedOutput.put("Sleepy Test", 1);
-        assertEquals(result.get("Sleepy Test"),1);
+        assertEquals(1,result.get("Sleepy Test"));
 
         expectedOutput.put("Unknown Test", 1);
-        assertEquals(result.get("Unknown Test"),1);
+        assertEquals(1,result.get("Unknown Test"));
 
         expectedOutput.put("Redundant Assertion", 1);
-        assertEquals(result.get("Redundant Assertion"),1);
+        assertEquals(1,result.get("Redundant Assertion"));
 
         expectedOutput.put("Dependent Test", 8);
-        assertEquals(result.get("Dependent Test"),8);
+        assertEquals(8,result.get("Dependent Test"));
 
         expectedOutput.put("Magic Number Test", 1);
-        assertEquals(result.get("Magic Number Test"),1);
+        assertEquals(1,result.get("Magic Number Test"));
 
         expectedOutput.put("Resource Optimism", 1);
-        assertEquals(result.get("Resource Optimism"),1);
+        assertEquals(1,result.get("Resource Optimism"));
 
         expectedOutput.put("Conditional Test Logic", 1);
-        assertEquals(result.get("Conditional Test Logic"),1);
+        assertEquals(1,result.get("Conditional Test Logic"));
 
         expectedOutput.put("EmptyTest", 1);
-        assertEquals(result.get("EmptyTest"),1);
+        assertEquals(1,result.get("EmptyTest"));
 
         expectedOutput.put("General Fixture", 1);
-        assertEquals(result.get("General Fixture"),1);
+        assertEquals(1,result.get("General Fixture"));
 
         expectedOutput.put("IgnoredTest", 1);
-        assertEquals(result.get("IgnoredTest"),1);
+        assertEquals(1,result.get("IgnoredTest"));
 
         expectedOutput.put("Sensitive Equality", 1);
-        assertEquals(result.get("Sensitive Equality"),1);
+        assertEquals(1,result.get("Sensitive Equality"));
 
         expectedOutput.put("Verbose Test", 1);
-        assertEquals(result.get("Verbose Test"),1);
+        assertEquals(1,result.get("Verbose Test"));
 
         expectedOutput.put("Default Test", 1);
-        assertEquals(result.get("Default Test"),1);
+        assertEquals(1,result.get("Default Test"));
 
         expectedOutput.put("Duplicate Assert", 1);
-        assertEquals(result.get("Duplicate Assert"),1);
+        assertEquals(1,result.get("Duplicate Assert"));
 
         expectedOutput.put("Exception Catching Throwing", 1);
-        assertEquals(result.get("Exception Catching Throwing"),1);
+        assertEquals(1,result.get("Exception Catching Throwing"));
 
         expectedOutput.put("Constructor Initialization", 1);
-        assertEquals(result.get("Constructor Initialization"),1);
+        assertEquals(1,result.get("Constructor Initialization"));
 
         expectedOutput.put("Print Statement", 1);
-        assertEquals(result.get("Print Statement"),1);
+        assertEquals(1,result.get("Print Statement"));
 
         expectedOutput.put("Lazy Test", 5);
-        assertEquals(result.get("Lazy Test"),5);
+        assertEquals(5,result.get("Lazy Test"));
 
         //Check that total result is equal
         assertEquals(expectedOutput, result);

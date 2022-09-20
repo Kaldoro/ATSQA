@@ -1,7 +1,7 @@
-import Enums.TestSmell;
-import Enums.HarmType;
-import File.FileFuncs;
-import TestSmells.TSHarm;
+import enums.TestSmell;
+import enums.HarmType;
+import file.FileFuncs;
+import testSmells.TSHarm;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ import java.util.List;
 public class main {
     public static void main(String[] args) {
         //IMPORTANT calculates the correct modifiers for the test smells
-        TSHarm.Init();
+        TSHarm.init();
 
         String[] mutationResult = FileFuncs.readFile("index.html");
         String[] testSmellResult = FileFuncs.readFile("result_byclasstest_testsmells.csv");
@@ -27,8 +27,8 @@ public class main {
             //Individual Metric scores
             Integer lineCoverageScore = Integer.parseInt(lineCoverageStr);
             Integer mutationScore = Integer.parseInt(mutationScoreStr);
-            Integer effectiveTestSmellScore = calculateTestSmellScore(HarmType.Effectiveness, smells);
-            Integer stabilityTestSmellScore = calculateTestSmellScore(HarmType.Stability, smells);
+            Integer effectiveTestSmellScore = calculateTestSmellScore(HarmType.EFFECTIVENESS, smells);
+            Integer stabilityTestSmellScore = calculateTestSmellScore(HarmType.STABILITY, smells);
 
             //Three subcategories scores
             Integer completenessScore = lineCoverageScore;

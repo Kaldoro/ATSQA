@@ -65,6 +65,13 @@ public class TSStudies {
         Bavota2015();
         Wu2022();
 
+        calcEffectivenessModifiers();
+        calcStabilityModifiers();
+
+        return new Pair<HashMap<TestSmell, Double>, HashMap<TestSmell, Double>>(effectivenessModifiers,stabilityModifiers);
+    }
+
+    static void calcEffectivenessModifiers() {
         //Calculate effectiveness modifiers
         effectivenessModifiers.put(TestSmell.Assertion_Roulette,calcAverage(assertionRouletteEffModifiers));
         effectivenessModifiers.put(TestSmell.Sensitive_Equality,calcAverage(sensitiveEqualityEffModifiers));
@@ -73,7 +80,9 @@ public class TSStudies {
         effectivenessModifiers.put(TestSmell.Mystery_Guest,calcAverage(mysteryGuestEffModifiers));
         effectivenessModifiers.put(TestSmell.General_Fixture,0.0);
         effectivenessModifiers.put(TestSmell.Lazy_Test,0.0);
+    }
 
+    static void calcStabilityModifiers() {
         //Calculate stability modifiers
         stabilityModifiers.put(TestSmell.Assertion_Roulette,calcAverage(assertionRouletteStabModifiers));
         stabilityModifiers.put(TestSmell.Sensitive_Equality,calcAverage(sensitiveEqualityStabModifiers));
@@ -83,7 +92,6 @@ public class TSStudies {
         stabilityModifiers.put(TestSmell.General_Fixture,calcAverage(generalFixtureStabModifiers));
         stabilityModifiers.put(TestSmell.Lazy_Test,calcAverage(lazyTestStabModifiers));
 
-        return new Pair<HashMap<TestSmell, Double>, HashMap<TestSmell, Double>>(effectivenessModifiers,stabilityModifiers);
     }
 
     //Adds all the numbers together and extracts the average

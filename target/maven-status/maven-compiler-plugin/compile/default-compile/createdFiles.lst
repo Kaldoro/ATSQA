@@ -1,0 +1,7 @@
+util\Pair.class
+TestSmells\TSHarm.class
+main.class
+Enums\HarmType.class
+File\FileFuncs.class
+TestSmells\TSStudies.class
+Enums\TestSmell.class

@@ -1,7 +1,7 @@
 import enums.TestSmell;
 import enums.HarmType;
 import file.FileFuncs;
-import testSmells.TSHarm;
+import test_smells.TSHarm;
 
 import java.util.ArrayList;
 import java.util.Arrays;

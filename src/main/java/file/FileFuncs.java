@@ -13,7 +13,7 @@ public class FileFuncs {
 
     }
     public static String[] readFile(String filePath) {
-        ArrayList<String> content = new ArrayList<String>();
+        ArrayList<String> content = new ArrayList<>();
         try {
             File myObj = new File(filePath);
             Scanner myReader = new Scanner(myObj);

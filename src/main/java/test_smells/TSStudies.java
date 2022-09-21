@@ -1,4 +1,4 @@
-package testSmells;
+package test_smells;
 
 import enums.TestSmell;
 import util.Pair;
@@ -71,7 +71,7 @@ public class TSStudies {
         calcEffectivenessModifiers();
         calcStabilityModifiers();
 
-        return new Pair<EnumMap<TestSmell, Double>, EnumMap<TestSmell, Double>>(effectivenessModifiers,stabilityModifiers);
+        return new Pair<>(effectivenessModifiers,stabilityModifiers);
     }
 
     static void calcEffectivenessModifiers() {

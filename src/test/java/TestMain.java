@@ -14,7 +14,7 @@ class TestMain {
     @Test
     void testGetSmells() {
         HashMap<String,Integer> result = main.getSmells(exampleTestSmellResult);
-        HashMap<String,Integer> expectedOutput = new HashMap<String,Integer>();
+        HashMap<String,Integer> expectedOutput = new HashMap<>();
 
         expectedOutput.put("LOC", 90);
         assertEquals(90,result.get("LOC"));
@@ -89,4 +89,3 @@ class TestMain {
         assertEquals(expectedOutput, result);
     }
 }
-

@@ -1,4 +1,4 @@
-package testSmells;
+package test_smells;
 
 import enums.TestSmell;
 import enums.HarmType;

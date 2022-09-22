@@ -11,8 +11,8 @@ public class TSHarm {
     TSHarm() {
 
     }
-    static EnumMap<TestSmell,Double> effectivenessModifiers = new EnumMap<>(TestSmell.class);
-    static EnumMap<TestSmell,Double> stabilityModifiers = new EnumMap<>(TestSmell.class);
+    public static EnumMap<TestSmell,Double> effectivenessModifiers = new EnumMap<>(TestSmell.class);
+    public static EnumMap<TestSmell,Double> stabilityModifiers = new EnumMap<>(TestSmell.class);
 
     public static void init() {
         Pair<EnumMap<TestSmell, Double>, EnumMap<TestSmell, Double>> results = TSStudies.calcModifiers();

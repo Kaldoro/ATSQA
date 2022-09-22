@@ -1,7 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
-
 import java.util.HashMap;
 
 class TestMain {
@@ -68,8 +66,8 @@ class TestMain {
         }
 
     }
-    TestFile testFile1 = new TestFile("testFile1", "file1", 50, 16, 8, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5);
-    TestFile testFile2 = new TestFile("testFile2", "file2", 40, 14, 5, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0);
+    TestFile testFile1 = new TestFile("testFile1", "file1", 50, 8, 8, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5);
+    TestFile testFile2 = new TestFile("testFile2", "file2", 40, 7, 5, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0);
 
     @Test
     void testGetSmells() {

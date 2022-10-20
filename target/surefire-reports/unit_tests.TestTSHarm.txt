@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: unit_tests.TestTSHarm
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in unit_tests.TestTSHarm

@@ -1,3 +1,5 @@
+package unit_tests;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import enums.HarmType;
@@ -6,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import test_smells.TSHarm;
 import java.util.HashMap;
 
-public class TestTSHarm {
+class TestTSHarm {
      HashMap<String,Integer> exampleSmells = new HashMap() {{
         put("LOC", 90);
         put("numberMethods", 15);
@@ -47,12 +49,12 @@ public class TestTSHarm {
     }
 
     @Test
-    void testGetSmellHarmStability() {
+    void testGetSmellHarmMaintainability() {
         //Mock the harm modifiers
         double eagerRouletteHarmModifier = 0.3;
-        TSHarm.stabilityModifiers.put(TestSmell.EAGER_TEST, eagerRouletteHarmModifier);
+        TSHarm.maintainabilityModifiers.put(TestSmell.EAGER_TEST, eagerRouletteHarmModifier);
 
-        double actualResult = TSHarm.getSmellHarm(HarmType.STABILITY, TestSmell.EAGER_TEST, exampleSmells);
+        double actualResult = TSHarm.getSmellHarm(HarmType.MAINTAINABILITY, TestSmell.EAGER_TEST, exampleSmells);
         double expectedDensity = exampleSmells.get("Eager Test") / (exampleSmells.get("LOC") / 500.0) ;
         double expectedResult = expectedDensity * eagerRouletteHarmModifier;
 
@@ -62,7 +64,7 @@ public class TestTSHarm {
     @Test
     void testInit() {
         TSHarm.init();
-        double stabAssertionModifier = TSHarm.stabilityModifiers.get(TestSmell.ASSERTION_ROULETTE);
-        assertNotEquals(0, stabAssertionModifier);
+        double mainAssertionModifier = TSHarm.maintainabilityModifiers.get(TestSmell.ASSERTION_ROULETTE);
+        assertNotEquals(0, mainAssertionModifier);
     }
 }

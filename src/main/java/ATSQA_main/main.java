@@ -1,12 +1,11 @@
+package ATSQA_main;
+
 import enums.TestSmell;
 import enums.HarmType;
 import file.FileFuncs;
 import test_smells.TSHarm;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class main {
     public static void main(String[] args) {
@@ -28,12 +27,12 @@ public class main {
             Integer lineCoverageScore = Integer.parseInt(lineCoverageStr);
             Integer mutationScore = Integer.parseInt(mutationScoreStr);
             Integer effectiveTestSmellScore = calculateTestSmellScore(HarmType.EFFECTIVENESS, smells);
-            Integer stabilityTestSmellScore = calculateTestSmellScore(HarmType.STABILITY, smells);
+            Integer maintainabilityTestSmellScore = calculateTestSmellScore(HarmType.MAINTAINABILITY, smells);
 
             //Three subcategories scores
             Integer completenessScore = lineCoverageScore;
             Integer effectivenessScore = (mutationScore + effectiveTestSmellScore + lineCoverageScore) / 3;
-            Integer maintainabilityScore = stabilityTestSmellScore;
+            Integer maintainabilityScore = maintainabilityTestSmellScore;
 
             //Final Score
             int overallQualityScore = (completenessScore + effectivenessScore + maintainabilityScore) / 3;
@@ -50,7 +49,7 @@ public class main {
             System.out.println("Code coverage: " + lineCoverageScore);
             System.out.println("Mutation score: " + mutationScore);
             System.out.println("Effective test smell score: " + effectiveTestSmellScore);
-            System.out.println("Stability test smell score: " + stabilityTestSmellScore);
+            System.out.println("Maintainability test smell score: " + maintainabilityTestSmellScore);
 
         }
     }
@@ -75,7 +74,7 @@ public class main {
         return smells;
     }
 
-    public static Integer calculateTestSmellScore(HarmType harmType, HashMap<String,Integer> smells) {
+    public static Integer calculateTestSmellScore(HarmType harmType, Map<String,Integer> smells) {
         double score = 100.0;
         for(TestSmell testSmell : TestSmell.values()) {
             score -= TSHarm.getSmellHarm(harmType,testSmell,smells);

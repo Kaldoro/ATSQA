@@ -1,1 +1,4 @@
-TestMain.class
+unit_tests\TestFileFuncs.class
+unit_tests\TestPair.class
+unit_tests\TestTSHarm.class
+unit_tests\TestTSHarm$1.class

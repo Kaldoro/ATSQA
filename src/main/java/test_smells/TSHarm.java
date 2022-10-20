@@ -3,24 +3,23 @@ package test_smells;
 import enums.TestSmell;
 import enums.HarmType;
 import util.Pair;
-
 import java.util.EnumMap;
-import java.util.HashMap;
+import java.util.Map;
 
 public class TSHarm {
     TSHarm() {
 
     }
-    public static EnumMap<TestSmell,Double> effectivenessModifiers = new EnumMap<>(TestSmell.class);
-    public static EnumMap<TestSmell,Double> stabilityModifiers = new EnumMap<>(TestSmell.class);
+    public static Map<TestSmell,Double> effectivenessModifiers = new EnumMap<>(TestSmell.class);
+    public static Map<TestSmell,Double> maintainabilityModifiers = new EnumMap<>(TestSmell.class);
 
     public static void init() {
         Pair<EnumMap<TestSmell, Double>, EnumMap<TestSmell, Double>> results = TSStudies.calcModifiers();
         effectivenessModifiers = results.a;
-        stabilityModifiers = results.b;
+        maintainabilityModifiers = results.b;
     }
 
-    public static double getSmellHarm(HarmType harmType, TestSmell name, HashMap<String,Integer> smells) {
+    public static double getSmellHarm(HarmType harmType, TestSmell name, Map<String,Integer> smells) {
         //Get the harm modifier
         double modifier = getModifier(harmType,name);
 
@@ -38,8 +37,8 @@ public class TSHarm {
         if(harmType == HarmType.EFFECTIVENESS) {
            modifier = effectivenessModifiers.get(name);
         }
-        else if (harmType == HarmType.STABILITY) {
-           modifier = stabilityModifiers.get(name);
+        else if (harmType == HarmType.MAINTAINABILITY) {
+           modifier = maintainabilityModifiers.get(name);
         }
         return modifier;
     }

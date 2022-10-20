@@ -1,9 +1,11 @@
+package unit_tests;
+
 import org.junit.jupiter.api.Test;
 import util.Pair;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestPair {
+class TestPair {
     Pair<Integer, String> pair1 = new Pair<>(3,"2");
     Pair <Integer, String> pair1Altered = new Pair<>(3, null);
     Pair<Integer, String> pair2 = new Pair<>(null, "1");

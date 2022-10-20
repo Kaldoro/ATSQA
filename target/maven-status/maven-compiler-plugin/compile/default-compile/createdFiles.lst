@@ -1,6 +1,5 @@
 util\Pair.class
 enums\HarmType.class
-main.class
 test_smells\TSStudies.class
 test_smells\TSHarm.class
 enums\TestSmell.class

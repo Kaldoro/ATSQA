@@ -1,15 +1,13 @@
+package unit_tests;
+
 import file.FileFuncs;
 import org.junit.jupiter.api.Test;
-import org.omg.CORBA.portable.ApplicationException;
-
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
 import java.io.PrintStream;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class TestFileFuncs {
+class TestFileFuncs {
 
     //IF THIS DIFFERS FROM THE INFORMATION IN THE ACTUAL FILE THE TEST WILL FAIL
     String[] contentOfTestFile = new String[] {
@@ -20,7 +18,7 @@ public class TestFileFuncs {
 
     @Test
     void testFileRead() {
-        String[] actualResult = FileFuncs.readFile("src/test/java/TestFiles/basicFile.txt");
+        String[] actualResult = FileFuncs.readFile("src/test/java/unit_tests/DummyFiles/basicFile.txt");
         for (int i=0; i < contentOfTestFile.length; i++) {
             assertEquals(contentOfTestFile[i],actualResult[i]);
         }
@@ -29,13 +27,12 @@ public class TestFileFuncs {
     @Test
     void testFileReadFileNotFound() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        //redirect the System-output (normaly the console) to a variable
+        //redirect the System-output to the variable outContent
         System.setErr(new PrintStream(outContent));
 
-        //call your method here
-        FileFuncs.readFile("src/test/java/TestFiles/basic");
+        FileFuncs.readFile("src/test/java/DummyFiles/basic");
 
-        //check if your error message is in the output variable
-        assertEquals("ERROR: Could not read the file or failed when reading the file, see stacktrace below\r\n", outContent.toString());
+        String actualOutput = outContent.toString().split("\r")[0];
+        assertEquals("ERROR: Could not read the file or failed when reading the file, see stacktrace below", actualOutput);
     }
 }

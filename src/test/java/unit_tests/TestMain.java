@@ -1,4 +1,8 @@
+package unit_tests;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import ATSQA_main.main;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 

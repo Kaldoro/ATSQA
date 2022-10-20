@@ -25,7 +25,7 @@ public class FileFuncs {
             myReader.close();
         } catch (FileNotFoundException e) {
             System.err.println("ERROR: Could not read the file or failed when reading the file, see stacktrace below");
-            //e.printStackTrace();
+            e.printStackTrace();
         }
         String[] finalOutput = new String[content.size()];
         content.toArray(finalOutput);

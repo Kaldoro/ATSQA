@@ -32,7 +32,7 @@ class TestFileFuncs {
 
         FileFuncs.readFile("src/test/java/DummyFiles/basic");
 
-        String actualOutput = outContent.toString().split("\r")[0];
+        String actualOutput = outContent.toString().split("\r\n")[0];
         assertEquals("ERROR: Could not read the file or failed when reading the file, see stacktrace below", actualOutput);
     }
 }

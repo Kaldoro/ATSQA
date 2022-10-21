@@ -32,7 +32,8 @@ class TestFileFuncs {
 
         FileFuncs.readFile("src/test/java/DummyFiles/basic");
 
-        String actualOutput = outContent.toString().split("\r\n")[0];
-        assertEquals("ERROR: Could not read the file or failed when reading the file, see stacktrace below", actualOutput);
+        String actualOutput = outContent.toString().split("\n")[0];
+        String filterWindows = actualOutput.split("\r")[0];
+        assertEquals("ERROR: Could not read the file or failed when reading the file, see stacktrace below", filterWindows);
     }
 }

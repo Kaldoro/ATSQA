@@ -1,0 +1,2 @@
+App;TestFileName;ProductionFileName;LOC;numberMethods;Assertion Roulette;Eager Test;Mystery Guest;Sleepy Test;Unknown Test;Redundant Assertion;Dependent Test;Magic Number Test;Conditional Test Logic;EmptyTest;General Fixture;IgnoredTest;Sensitive Equality;Verbose Test;Default Test;Resource Optimism;Duplicate Assert;Exception Catching Throwing;Constructor Initialization;Print Statement;Lazy Test
+MusicBot;FairQueueTest;C:\Users\Danny\.jnose_projects\MusicBot\src\main\java\com\jagrosh\jmusicbot\queue\FairQueue.java;64;3;2;2;0;0;0;0;0;0;2;0;0;0;0;0;0;0;0;0;0;0;4

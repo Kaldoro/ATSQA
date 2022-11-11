@@ -26,6 +26,9 @@ public class TSHarm {
         //Get how often the particular test smell occurs in the project.
         Integer smellCount = smells.get(name.getNameStr());
 
+        if(smellCount == null) {
+            return 0;
+        }
         //Determine the smell density per 500 lines of test code
         double smellDensity = smellCount / (smells.get("LOC") / 500.0);
 

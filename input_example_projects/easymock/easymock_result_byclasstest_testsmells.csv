@@ -1,0 +1,19 @@
+App;TestFileName;ProductionFileName;LOC;numberMethods;Assertion Roulette;Eager Test;Mystery Guest;Sleepy Test;Unknown Test;Redundant Assertion;Dependent Test;Magic Number Test;Conditional Test Logic;EmptyTest;General Fixture;IgnoredTest;Sensitive Equality;Verbose Test;Default Test;Resource Optimism;Duplicate Assert;Exception Catching Throwing;Constructor Initialization;Print Statement;Lazy Test
+easymock;ClassProxyFactoryTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\ClassProxyFactory.java;54;2;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+easymock;LinkedClassLoaderTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\LinkedClassLoader.java;56;1;2;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+easymock;PrimitiveUtilsTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\PrimitiveUtils.java;81;5;28;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+easymock;ArgumentToStringTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\ArgumentToString.java;106;13;5;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;1
+easymock;ClassInstantiatorFactoryTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\ClassInstantiatorFactory.java;63;5;4;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+easymock;ErrorMessageTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\ErrorMessage.java;59;4;6;4;0;0;0;0;0;1;0;0;0;0;3;0;0;0;0;0;0;0;2
+easymock;IMockBuilderTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\IMockBuilder.java;108;13;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+easymock;InvocationTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\Invocation.java;120;8;10;2;0;0;0;0;0;0;0;0;3;0;4;0;0;0;1;1;0;0;2
+easymock;MockTypeTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\MockType.java;104;11;14;0;0;0;0;0;0;0;0;0;0;0;6;0;0;0;0;0;0;0;0
+easymock;ResultTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\Result.java;59;4;5;3;0;0;0;0;0;0;0;0;0;0;3;0;0;0;0;0;0;0;1
+easymock;UtilTest;C:\Users\Danny\.jnose_projects\easymock\core\src\test\java\org\easymock\tests\Util.java;54;3;7;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;3
+easymock;CompareToTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\matchers\CompareTo.java;93;7;6;1;0;0;4;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;1
+easymock;EasyMockPropertiesTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\EasyMockProperties.java;252;15;5;2;0;0;0;0;0;0;0;0;0;0;1;2;0;0;0;3;0;0;1
+easymock;EasyMockSupportTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\EasyMockSupport.java;340;21;30;11;0;0;6;0;0;0;0;0;0;3;6;1;0;0;2;9;0;0;7
+easymock;EasyMockTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\EasyMock.java;50;2;2;2;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;4
+easymock;ReflectionUtilsTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\internal\ReflectionUtils.java;54;5;3;0;0;0;0;0;0;3;0;0;0;0;0;0;0;0;0;0;0;0;1
+easymock;EasymockExtensionTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\EasyMockExtension.java;46;2;2;0;0;0;0;0;0;2;0;0;0;0;0;0;0;0;0;0;0;0;0
+easymock;EasyMockListenerTest;C:\Users\Danny\.jnose_projects\easymock\core\src\main\java\org\easymock\EasyMockListener.java;100;8;14;0;0;0;0;0;0;0;0;0;0;0;4;0;0;0;0;0;0;0;0

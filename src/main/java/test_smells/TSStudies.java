@@ -90,7 +90,7 @@ public class TSStudies {
         //Add results from studies
         bavota2015();
         wu2022();
-        //spadini2018();
+        spadini2018();
 
         calcEffectivenessModifiers();
         calcMaintainabilityModifiers();
